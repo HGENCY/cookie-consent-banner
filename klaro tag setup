@@ -1,0 +1,100 @@
+<script>
+  
+var klaroConfig = {
+   version: 1,
+   elementID: 'klaro',
+   styling: {
+        theme: ['light', 'top', 'wide'],
+    },
+    noAutoLoad: false,
+    htmlTexts: true,
+    embedded: false,
+    groupByPurpose: false,
+    storageMethod: 'cookie',
+    cookieName: 'klaro',
+    cookieExpiresAfterDays: 365,
+    default: false,
+    mustConsent: false,
+    acceptAll: true,
+    hideDeclineAll: false,
+    hideLearnMore: false,
+    noticeAsModal: false,
+
+
+    translations: {
+        en: {
+            consentModal: {
+                title: '<u>Consent Settings</u>',
+                description:
+                    'Here you can see and customize the information that we collect about you.',
+            },
+            inlineTracker: {
+                description: 'Example of an inline tracking script',
+            },
+            externalTracker: {
+                description: 'Example of an external tracking script',
+            },
+            adsense: {
+                description: 'Displaying of advertisements (just an example)',
+                title: 'Google Adsense Advertisement',
+            },
+            matomo: {
+                description: 'Collecting of visitor statistics',
+            },
+            camera: {
+                description:
+                    'A surveillance camera (just an example for an IMG tag)',
+            },
+            cloudflare: {
+                description: 'Protection against DDoS attacks',
+            },
+            intercom: {
+                description:
+                    'Chat widget & collecting of visitor statistics (just an example)',
+            },
+            mouseflow: {
+                description: 'Real-Time user analytics (just an example)',
+            },
+            googleFonts: {
+                description: 'Web fonts hosted by Google',
+            },
+            purposes: {
+                analytics: 'Analytics',
+                security: 'Security',
+                livechat: 'Livechat',
+                advertising: 'Advertising',
+                styling: 'Styling',
+            },
+        },
+    },
+
+
+    services: [
+        {
+            name: 'analytics',
+            default: false,
+            title: 'Analytical cookies',
+            purposes: ['Analytics'],
+        },
+      {
+            name: 'marketing',
+            default: false,
+            title: 'Markting cookies',
+            purposes: ['Marketing'],
+        },
+      {
+            name: 'functional',
+            default: false,
+			 required: true,
+            title: 'Functional cookies',
+            purposes: ['language preferences'],
+        },
+    ],
+};
+</script>
+
+
+<script defer type="text/javascript" src="https://cdn.kiprotect.com/klaro/v0.7.16/klaro.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.kiprotect.com/klaro/v0.7.16/klaro.min.css" />
